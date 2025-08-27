@@ -1,0 +1,18 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Site{% endblock %}</title>
+    <!-- Common CSS/JS -->
+</head>
+<body>
+    <header><h1>Welcome to My Site</h1></header>
+    <!-- <nav>...</nav> -->
+    <main>
+        {% block content %}
+        <!-- Default content or instructions -->
+        {% endblock %}
+    </main>
+    <!-- <footer>...</footer> -->
+</body>
+</html>
