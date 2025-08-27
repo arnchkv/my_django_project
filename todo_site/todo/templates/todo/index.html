@@ -62,7 +62,7 @@
           <br />
           <br />
           <form
-            action="/todo/del/{{i.id}}"
+            action={% url 'del' i.id %}
             method="POST"
             style="padding-right: 4%; padding-bottom: 3%"
           >
