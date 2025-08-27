@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from todo import views
+from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todo/', include('todo.urls')),
     # path('', views.index, name="todo"),
     # path('del/<str:item_id>', views.remove, name="del"),
+    path('', views.index, name="myapp_index" )
 ]
