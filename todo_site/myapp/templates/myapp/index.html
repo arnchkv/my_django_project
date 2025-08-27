@@ -4,6 +4,5 @@
 {% block title %}Home - My Site{% endblock %}
 
 {% block content %}
-    <h2>This is the Home Page</h2>
-    <p>Some specific content for the home page.</p>
+    <a href={% url 'todo' %} class="btn btn-primary">TODO</a>
 {% endblock %}
