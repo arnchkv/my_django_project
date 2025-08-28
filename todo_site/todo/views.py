@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .forms import TodoForm
 from .models import Todo
 
-# Create your views here.
+@login_required
 def index(request):
     item_list = Todo.objects.order_by("-date")
     if request.method == "POST":
@@ -23,6 +24,7 @@ def index(request):
 
     return render(request, 'todo/index.html', page)
 
+@login_required
 def remove(request, item_id):
     item = Todo.objects.get(id=item_id)
     item.delete()

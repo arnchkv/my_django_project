@@ -47,6 +47,15 @@
 
     <center class="row">
       <h1><i>__TODO LIST__</i></h1>
+      <p>
+        Welcome, {{ request.user.username }}!
+      </p>
+      <p>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Logout</button>
+        </form>
+      </p>
       <hr />
     </center>
 
